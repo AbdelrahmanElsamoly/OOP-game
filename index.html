@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="container-fluid father px-3">
+      <div
+        class="container bg-light mx-auto"
+        style="border-radius: 10px"
+        id="setting"
+      >
+        <div class="contente py-5">
+          <h2 class="text-center">Setting Your quiz</h2>
+          <!-- optional select -->
+          <div class="form-group">
+            <label for="Category" class="p-2">Category</label>
+            <select name="" class="form-control" id="Categoryy">
+              <option value="9">General knowledge</option>
+              <option value="27">Animals</option>
+              <option value="21">Sports</option>
+              <option value="18">Computer since</option>
+              <option value="24">Politices</option>
+            </select>
+          </div>
+          <!-- checks radio -->
+          <div class="form-check py-3">
+            <label for="checks" class="py-">Defficulty</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="Easy"
+                value="easy"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Easy
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="Medium"
+                value="medium"
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Medium
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="Hard"
+                value="h ard"
+              />
+              <label class="form-check-label" for="flexRadioDefault3">
+                Hard
+              </label>
+            </div>
+          </div>
+          <!-- quantity og ques -->
+          <div class="content position-relative my-4">
+            <input
+              type="number"
+              name=""
+              class="form-control"
+              id="Questions"
+              placeholder="Number Of questions..."
+            />
+            <button
+              class="btn btn-primary position-absolute my-2 px-3 text-center"
+              style="color: white; right: 0; border-radius: 10px"
+              id="btn-start"
+            >
+              Start
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- start quiz -->
+      <div
+        class="container bg-light mx-auto py-3 w-md-75"
+        style="border-radius: 20px; display: none"
+        id="quiz"
+      >
+        <div class="item position-relative">
+          <h2 class="text-center">Quiz</h2>
+          <button
+            class="btn btn-success position-absolute"
+            style="display: none"
+            id="correct"
+          >
+            Correct
+          </button>
+          <button
+            class="btn btn-danger position-absolute"
+            style="display: none"
+            id="incorrect"
+          >
+            inCorrect
+          </button>
+          <div id="current"></div>
+          <hr class="mt-5" />
+        </div>
+
+        <div class="ques pb-5 position-relative">
+          <h3>Q:</h3>
+          <div id="question"></div>
+          <div id="userAnswer" class="form-check"></div>
+          <button
+            class="btn btn-danger position-absolute"
+            style="right: 5px"
+            id="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <!-- Score -->
+      <div
+        class="container bg-light py-3 w-md-75"
+        style="border-radius: 20px; display: none"
+        id="scorePage"
+      >
+        <div class="item">
+          <h2 class="text-center">Score</h2>
+          <hr />
+        </div>
+        <div class="item text-center">
+          <div>score</div>
+          <div id="score"></div>
+        </div>
+        <div class="item py-5 position-relative">
+          <button
+            class="btn btn-info position-absolute"
+            style="right: 10px"
+            id="tryBtn"
+          >
+            Try Again ?
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- js links -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/oop.js" type="module"></script>
+  </body>
+</html>
